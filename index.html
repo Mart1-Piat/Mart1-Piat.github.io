@@ -45,7 +45,13 @@
 						<div class="inner">
 							<header>
 								<h1>Portfolio de Martin Piat</h1>
-								<p>Ancien professeur d'anglais depuis toujours passionné par l'informatique ! <br> Fan de solutions et productions créatives, je suis attiré par tout ce qui résulte en un produit numérique concret, visuel et interactif. <br><a href="page-apropos.html">Plus d'informations >></a>
+								<div class="bio">
+									<div class="biotexte">
+										<p>Ancien professeur d'anglais depuis toujours passionné par l'informatique ! <br> Fan de solutions et productions créatives, je suis attiré par tout ce qui résulte en un produit numérique concret, visuel et interactif. <br><a href="page-apropos.html">En savoir plus >></a></p>
+									</div>
+									<img src="images/id.png"/>
+								</div>
+								
 								<h3><a href="./resources/CV_Martin_PIAT.pdf">>Consultez mon CV!📃<</a></h3>
 							</header>
 							
@@ -65,7 +71,7 @@
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/jeu.png" alt="" />
 									</span>
 									<a href="page-cpp.html">
 										<h2>C++</h2>
@@ -76,7 +82,7 @@
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="images/CIUP.jpg" />
 									</span>
 									<a href="page-java.html">
 										<h2>Java</h2>
@@ -87,7 +93,7 @@
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="images/mcd.jpg" alt="" />
 									</span>
 									<a href="page-sql.html">
 										<h2>SQL</h2>
@@ -98,7 +104,7 @@
 								</article>
 								<article class="style5">
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="images/raspberry.jpg" alt="" />
 									</span>
 									<a href="page-debian.html">
 										<h2>Linux</h2>
@@ -109,7 +115,7 @@
 								</article>
 								<article class="style6">
 									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
+										<img src="images/pic04.jpg" alt="" />
 									</span>
 									<a href="page-autre.html">
 										<h2>Autres</h2>
@@ -126,13 +132,11 @@
 					<footer id="footer">
 						<div class="inner">
 							<section>
-								<h2>Follow</h2>
+								<h2><a>Contact</a></h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/Mart1-Piat/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="+33 6 52 01 65 30" onclick=toClipboard(event,this) class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="martin98piat@gmail.com" onclick = toClipboard(event,this) class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
@@ -149,5 +153,17 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+			<!-- copier infos boutons footer -->>
+			<script>
+				function toClipboard(event, element) {
+				event.preventDefault();
+
+				var text = element.getAttribute('href');
+				navigator.clipboard.writeText(text);
+
+				alert("Copié dans le presse-papier!");
+				}
+			</script>
 	</body>
 </html>

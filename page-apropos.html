@@ -48,13 +48,13 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Martin Piat</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h1>Martin Piat - Qui suis-je?</h1>
+							<span class="image main apropos"><img src="images/photo-lib.jpg" alt="" /></span>
 							<h2>Compétences Informatiques</h2>
 							<div class="flex-container">
 								<div class="paragraph-1">
 									<h4>Langages:</h4>
-									<p>Java, C++, Python, SQL, PL/SQL, XAML(WPF)</p>
+									<p>Java, C++, C#, Python, SQL, PL/SQL, HTML/CSS, XAML(WPF)</p>
 								</div>
 								<div class="paragraph-2">
 									<h4>• Programmation orientée objets</h4>
@@ -88,15 +88,15 @@
 							<div class="flex-container">
 								<div>
 									<h4>2015-18</h4>
-									<p>Licence d'anglais🧑‍🎓<br> @ Université Paris-Est Créteil</p>
+									<p>🧑‍🎓 Licence d'anglais<br> @ Université Paris-Est Créteil</p>
 								</div>
 								<div>
 									<h4>2019-20</h4>
-									<p>Professeur d'anglais🧑‍🏫</p>
+									<p>🧑‍🏫 Professeur d'anglais<br>@ Lycée Guillaume Budé,<br>Limeil-Brévannes</p>
 								</div>
 								<div>
 									<h4>2021-24</h4>
-									<p>Traducteur freelance🧑‍💻</p>
+									<p>🧑‍💻 Traducteur freelance</p>
 								</div>
 								<div>
 									<h3>2024...</h3>
@@ -110,6 +110,15 @@
 									<h4>Jeux Vidéos</h4>
 									<p>Principalement de la 4e à 6e génération de consoles</p>
 								</div>
+								<div>
+									<h4>Dessin & écriture</h4>
+									<p>Ecriture d'une bd originale  et worldbuilding sur mon temps libre</p>
+								</div>
+							</div>
+							
+							<h2>Mon "pitch" vidéo</h2>
+							<div>
+								<iframe width="640" height="360" src="https://www.youtube.com/embed/BedJXiNqTNo" title="Pitch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
 							
 						</div>
@@ -119,13 +128,11 @@
 				<footer id="footer">
 					<div class="inner">
 						<section>
-							<h2>Follow</h2>
+							<h2><a href="contact.html">Contact</a></h2>
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-								<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-								<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://github.com/Mart1-Piat/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="+33 6 52 01 65 30" onclick=toClipboard(event,this) class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="martin98piat@gmail.com" onclick = toClipboard(event,this) class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
 						</section>
 						<ul class="copyright">
@@ -133,15 +140,27 @@
 						</ul>
 					</div>
 				</footer>
+		</div>
 
-			</div>
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+
+		<!-- copier infos boutons footer -->>
+		<script>
+			function toClipboard(event, element) {
+			event.preventDefault();
+
+			var text = element.getAttribute('href');
+			navigator.clipboard.writeText(text);
+
+			alert("Copié dans le presse-papier!");
+			}
+		</script>
 
 	</body>
 </html>
