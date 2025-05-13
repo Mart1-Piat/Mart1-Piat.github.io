@@ -99,7 +99,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: #ffffff !important;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3352,7 +3352,7 @@ input, select, textarea {
 		}
 
 		body {
-			background: linear-gradient(70deg, rgb(92, 147, 231) 0%, rgba(87, 199, 133, 0) 30%, rgba(237, 221, 83, 0) 100%);
+			background: linear-gradient(70deg, rgb(92, 147, 231) 0%, rgba(87, 199, 133, 0) 30%, rgba(237, 221, 83, 0) 100%) !important;
 		}
 
 		.bio {
