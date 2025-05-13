@@ -3352,19 +3352,19 @@ input, select, textarea {
 		}
 
 		body {
-			background: linear-gradient(70deg, rgb(92, 147, 231) 0%, rgba(87, 199, 133, 0) 30%, rgba(237, 221, 83, 0) 100%) !important;
+			background: linear-gradient(50deg, rgba(92, 148, 231, 0.5) 0%, rgba(87, 199, 133, 0) 50%, rgba(237, 221, 83, 0) 100%) !important;
 		}
 
 		.bio {
 			display:grid;
 			align-items: center;
 			grid-template-columns: 1fr 1fr;
-			column-gap: 11px;
+			column-gap: 10%;
 			padding:0%;
 		}
 		.bio img {
-			height: 400px;
-			margin-left:30%;
+			height: 450px;
+			margin-left:0%;
 			-webkit-mask-image: linear-gradient(black 70%, transparent);
 			mask-image: linear-gradient(black 70%, rgba(0,0,0,0.2));
 			
@@ -3375,6 +3375,17 @@ input, select, textarea {
 			-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 		}
+
+		.biotexte p{
+			background-color: #ecf8ff;
+			font-size: 1.1rem;
+			padding: 30px;
+			border-radius: 15px;
+		}
+		.biotexte a {
+			font-size: larger;
+		}
+
 		.image.main.apropos{
 			max-height: 500px;
 			-webkit-mask-image: linear-gradient(black 70%, transparent);
@@ -3388,4 +3399,13 @@ input, select, textarea {
 			mask-repeat: no-repeat;
 		}
 
+		.contents h2 {
+			background: linear-gradient(90deg, rgba(42, 123, 155, 0) 0%, rgba(87, 199, 133, 0) 50%, rgba(237, 221, 83, 0.295) 100%);
+		}
+
+		h3, h4 {
+			text-transform: none !important;
+			font-weight: boldest;
+			letter-spacing: 1.5px ;
+		}
 
