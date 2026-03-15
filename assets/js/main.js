@@ -7,7 +7,61 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body');
+		$body = $('body'),
+		$html = $('html'),
+		themeStorageKey = 'site-theme',
+		$themeToggle = null;
+
+	function getStoredTheme() {
+		try {
+			return window.localStorage.getItem(themeStorageKey);
+		} catch (error) {
+			return null;
+		}
+	}
+
+	function storeTheme(theme) {
+		try {
+			window.localStorage.setItem(themeStorageKey, theme);
+		} catch (error) {
+			return;
+		}
+	}
+
+	function updateThemeToggle(theme) {
+		if (!$themeToggle)
+			return;
+
+		var isDark = theme === 'dark';
+
+		$themeToggle
+			.attr('aria-pressed', isDark ? 'true' : 'false')
+			.attr('aria-label', isDark ? 'Activer le light mode' : 'Activer le night mode')
+			.find('.theme-toggle-label')
+				.text(isDark ? 'Light mode' : 'Night mode');
+	}
+
+	function applyTheme(theme) {
+		var normalizedTheme = theme === 'dark' ? 'dark' : 'light',
+			isDark = normalizedTheme === 'dark';
+
+		$html.toggleClass('theme-dark', isDark);
+		$body.toggleClass('theme-dark', isDark);
+		$body.attr('data-theme', normalizedTheme);
+		updateThemeToggle(normalizedTheme);
+	}
+
+	function getPreferredTheme() {
+		var storedTheme = getStoredTheme();
+
+		if (storedTheme === 'light' || storedTheme === 'dark')
+			return storedTheme;
+
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			return 'dark';
+
+		return 'light';
+	}
 
 	// Breakpoints.
 		breakpoints({
@@ -29,6 +83,33 @@
 	// Touch?
 		if (browser.mobile)
 			$body.addClass('is-touch');
+
+	// Theme toggle.
+		applyTheme(getPreferredTheme());
+
+		if ($('#header nav ul').length > 0) {
+			$themeToggle = $(
+				'<button type="button" class="theme-toggle" aria-live="polite">' +
+					'<span class="theme-toggle-track" aria-hidden="true">' +
+						'<span class="theme-toggle-thumb"></span>' +
+					'</span>' +
+					'<span class="theme-toggle-label"></span>' +
+				'</button>'
+			);
+
+			$('#header nav ul').prepend(
+				$('<li class="theme-toggle-item"></li>').append($themeToggle)
+			);
+
+			updateThemeToggle($body.attr('data-theme'));
+
+			$themeToggle.on('click', function() {
+				var nextTheme = $body.hasClass('theme-dark') ? 'light' : 'dark';
+
+				applyTheme(nextTheme);
+				storeTheme(nextTheme);
+			});
+		}
 
 	// Forms.
 		var $form = $('form');
