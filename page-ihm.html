@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projet - C++</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script>
+			(function() {
+				try {
+					var storedTheme = window.localStorage.getItem('site-theme');
+					var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+					if (storedTheme === 'dark' || (!storedTheme && prefersDark))
+						document.documentElement.classList.add('theme-dark');
+				} catch (error) {}
+			})();
+		</script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<div class="inner">
+
+						<!-- Logo -->
+							<a href="index.html" class="logo">
+								<span class="symbol"><img src="images/extraterrestrial-alien.svg" alt="" /></span><span class="title">Take me home!</span>
+							</a>
+
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="index.html">Accueil - Mes projets</a></li>
+						<li><a href="page-apropos.html">Qui suis-je?</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Projet Démineur en IHM</h1>
+							<span class="image main"><img src="images/mine.jpg"/></span>
+							<h2><a href="https://github.com/Mart1-Piat/minesweeper">>Lien github vers le projet<</a></h2>
+							<p>Dans le cadre du BUT Informatique, ce projet consistait à reproduire le jeu classique Démineur, popularisé par les anciennes versions de Windows.</p>
+							<p>Le joueur évolue sur une grille dont les cases sont initialement masquées et doit révéler toutes celles qui ne contiennent pas de bombes. Lorsqu’une case est révélée, elle indique le nombre de bombes présentes dans son voisinage immédiat. Si aucune bombe n’est adjacente, le jeu découvre automatiquement les cases voisines, permettant de révéler de larges zones en un seul clic. Le joueur peut également placer des drapeaux pour marquer les cases suspectées de contenir une bombe. La partie est perdue si une bombe est révélée.</p>
+							<p>Ce projet a permis de travailler la logique évènementielle, la gestion d’une grille de jeu, ainsi que du code récursif pour la création de la grille. Le joueur peut également paramétrer la taille de la grille et le nombre de bombes, ce qui ajoute une dimension de configuration et de gestion dynamique des données.</p>
+
+						</div>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2><a>Contact</a></h2>
+							<ul class="icons">
+								<li><a href="https://github.com/Mart1-Piat/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="+33 6 52 01 65 30" onclick=toClipboard(event,this) class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="martin98piat@gmail.com" onclick = toClipboard(event,this) class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design template: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+
+		<!-- copier infos boutons footer -->
+		<script>
+			function toClipboard(event, element) {
+			event.preventDefault();
+
+			var text = element.getAttribute('href');
+			navigator.clipboard.writeText(text);
+
+			alert("Copié dans le presse-papier!");
+			}
+		</script>
+	</body>
+</html>
