@@ -6,13 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Projet - SQL</title>
+		<title>Projet - SAE</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<script>
 			(function() {
 				try {
-					if (window.localStorage.getItem('site-theme') === 'dark')
+					var storedTheme = window.localStorage.getItem('site-theme');
+					var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+					if (storedTheme === 'dark' || (!storedTheme && prefersDark))
 						document.documentElement.classList.add('theme-dark');
 				} catch (error) {}
 			})();
@@ -25,25 +27,25 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-			<header id="header">
-				<div class="inner">
+				<header id="header">
+					<div class="inner">
 
-					<!-- Logo -->
-						<a href="index.html" class="logo">
-							<span class="symbol"><img src="images/extraterrestrial-alien.svg" alt="" /></span><span class="title">Take me home!</span>
-						</a>
+						<!-- Logo -->
+							<a href="index.html" class="logo">
+								<span class="symbol"><img src="images/extraterrestrial-alien.svg" alt="" /></span><span class="title">Take me home!</span>
+							</a>
 
-					<!-- Nav -->
-						<nav>
-							<ul>
-								<li><a href="#menu">Menu</a></li>
-							</ul>
-						</nav>
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
 
-				</div>
-			</header>
+					</div>
+				</header>
 
-				<!-- Menu -->
+			<!-- Menu -->
 				<nav id="menu">
 					<h2>Menu</h2>
 					<ul>
@@ -56,19 +58,21 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Projet - SQL</h1>
-							<span class="image main"><img src="images/sql-page.jpg" alt="" /></span>
-							<p>Projet d'IUT de modélisation et d’implémentation de base de données en deux étapes : une phase d’analyse terrain et modélisation de base de donnée (MCD) individuelle, suivie d’une mise en œuvre technique avec le SGBD SQLite en binômes.</p>
-							<p>Le sujet de ce projet est basé sur un cas réel, après l’interview d’un ami ayant travaillé avec la DGSI sur le déploiement d'équipement. L’objectif était de modéliser la gestion de la répartition de téléphones portables sécurisés au sein de cette administration. Ces équipements, couplés à des puces et des applications de sécurité, nécessitent un suivi rigoureux tant sur le plan logistique que fonctionnel.</p>
-							<p>À partir des informations recueillies, j’ai conçu un Modèle Conceptuel de Données (MCD) structurant les relations entre agents, équipements, applications et historiques d’attribution. J’ai ensuite traduit ce modèle en schéma relationnel, implémenté une base dans SQLite, défini les règles de gestion (contrôle de formats, contraintes de cohérence…), et inséré des jeux de données représentatifs. Enfin, j’ai rédigé une série de requêtes SQL pertinentes pour interroger et exploiter efficacement cette base.</p>
+							<h1>Projet Transversal - DOO - SQL - API REST - PHP</h1>
+							<span class="image main"><img src="images/websae.jpg"/></span>
+							<p>Dans le cadre du semestre 3 du BUT Informatique, ce projet consistait à concevoir une plateforme de création et de gestion de groupes d’étudiants pour les services d’enseignement. L’objectif était de permettre l’organisation automatique de groupes à partir des informations des promotions et des étudiants.</p>
+							<p>Le système repose sur une base de données et une API REST permettant de gérer les données (étudiants, promotions, groupes) et de générer des groupes équilibrés selon différents critères. Une interface cliente interroge cette API pour accéder et modifier les données et visualiser les groupes générés.</p>
+							<p>Ce projet a permis de travailler la modélisation de données, l’utilisation de SQL dans une application, la conception orientée objet, ainsi que la mise en œuvre d’algorithmes de génération de groupes, et la création et l'interrogation d'une API REST. Il a également été réalisé en travail d’équipe, avec utilisation de Git et des livrables techniques réguliers.</p>
+
 						</div>
+
 					</div>
 
 				<!-- Footer -->
 				<footer id="footer">
 					<div class="inner">
 						<section>
-							<h2><a href="contact.html">Contact</a></h2>
+							<h2><a>Contact</a></h2>
 							<ul class="icons">
 								<li><a href="https://github.com/Mart1-Piat/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="+33 6 52 01 65 30" onclick=toClipboard(event,this) class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
