@@ -3479,6 +3479,15 @@ input, select, textarea {
 			letter-spacing: 0.24em;
 		}
 
+		footer h2,
+		.contents h2 {
+			display: inline-block;
+			padding: 0.25em 0.7em;
+			border-radius: 999px;
+			background: var(--section-wash);
+			letter-spacing: 0.24em;
+		}
+
 		h3,
 		h4 {
 			text-transform: none !important;
