@@ -2903,7 +2903,7 @@ input, select, textarea {
 
 					#header nav ul li a[href="#menu"] {
 						-webkit-tap-highlight-color: transparent;
-						width: 4em;
+						/*width: 4em;*/
 						text-indent: 4em;
 						font-size: 1em;
 						overflow: hidden;
@@ -3473,6 +3473,15 @@ input, select, textarea {
 		h2,
 		.contents h2 {
 			display: inline-block;
+			/*padding: 0.25em 0.7em;*/
+			border-radius: 999px;
+			background: var(--section-wash);
+			letter-spacing: 0.24em;
+		}
+
+		footer h2,
+		.contents h2 {
+			display: inline-block;
 			padding: 0.25em 0.7em;
 			border-radius: 999px;
 			background: var(--section-wash);
@@ -3928,3 +3937,26 @@ input, select, textarea {
 			}
 		}
 
+#divGit {
+	background-image: url("../../images/GitHub_Invertocat_Black.png") !important;
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-blend-mode: overlay;
+}
+
+#divLI {
+	background-image: url("../../images/InBug-Black.png") !important;
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-blend-mode: overlay;
+}
+
+#divContact{
+	background-image: url("../../images/mail.png") !important;
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-blend-mode: overlay;
+}
